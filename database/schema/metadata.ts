@@ -4,7 +4,7 @@ import {message} from "./message";
 import {timestamps} from "../classes/timestamps";
 
 
-export const metadata = sqliteTable('source', {
+export const metadata = sqliteTable('metadata', {
     ...idField,
     messageId: integer('message_id').notNull().references(() => message.id),
     name: text('name').notNull(),

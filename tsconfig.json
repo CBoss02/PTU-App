@@ -10,7 +10,7 @@
     "moduleResolution": "bundler", // or "nodenext"
     "module": "ESNext", // optional but recommended with nodenext
     "target": "ES2022", // or similar modern target
-    "types": ["@cloudflare/workers-types"], // if needed
+    "types": ["@cloudflare/workers-types"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./app/*"]
