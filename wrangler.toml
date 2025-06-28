@@ -7,8 +7,8 @@ assets = { directory = "./build/client/" }
 
 [[d1_databases]]
 binding = "DB"
-database_name = "<your-database-name>"
-database_id = "<your-database-id>"
+database_name = "ptu-db"
+database_id = "d925390b-d105-40f5-b7bb-a7560065cab7"
 migrations_dir = "database/drizzle"
 
 [observability.logs]
