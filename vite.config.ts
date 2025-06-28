@@ -5,7 +5,7 @@ import serverAdapter from 'hono-react-router-adapter/vite'
 import { defineConfig, type PluginOption } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import { getLoadContext } from './load-context'
-import * as path from "node:path";
+import path from "path";
 
 export default defineConfig((_) => ({
   ssr: {
@@ -14,7 +14,7 @@ export default defineConfig((_) => ({
       conditions: ['workerd', 'worker', 'browser'],
       externalConditions: ['workerd', 'worker'],    
       alias: {
-        '@': path.resolve(__dirname, 'app'),
+        '@': path.resolve(__dirname, './app'),
       },
     },
     optimizeDeps: {
