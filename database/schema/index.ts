@@ -1,2 +1,7 @@
 export { todos } from './todo'
-export { users } from './user'
+export { user } from './user'
+export { chat } from './chat'
+export { group } from './group'
+export { message } from './message'
+export { model } from './model'
+export { metadata } from './metadata'
