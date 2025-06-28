@@ -11,5 +11,9 @@
     "module": "ESNext", // optional but recommended with nodenext
     "target": "ES2022", // or similar modern target
     "types": ["@cloudflare/workers-types"], // if needed
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["app/*"]
+    }
   }
 }

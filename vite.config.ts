@@ -5,13 +5,17 @@ import serverAdapter from 'hono-react-router-adapter/vite'
 import { defineConfig, type PluginOption } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import { getLoadContext } from './load-context'
+import * as path from "node:path";
 
 export default defineConfig((_) => ({
   ssr: {
     target: 'webworker',
     resolve: {
       conditions: ['workerd', 'worker', 'browser'],
-      externalConditions: ['workerd', 'worker'],
+      externalConditions: ['workerd', 'worker'],    
+      alias: {
+        '@': path.resolve(__dirname, 'app'),
+      },
     },
     optimizeDeps: {
       include: [
