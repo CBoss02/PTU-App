@@ -10,7 +10,7 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import {Button} from "@/components/ui/button.tsx";
+import {Button} from "@/components/ui/button";
 
 // Menu items.
 const items = [

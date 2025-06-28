@@ -13,7 +13,7 @@
     "types": ["@cloudflare/workers-types"], // if needed
     "baseUrl": ".",
     "paths": {
-      "@/*": ["app/*"]
+      "@/*": ["./app/*"]
     }
   }
 }

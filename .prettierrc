@@ -11,6 +11,6 @@
   "tabWidth": 2,
   "trailingComma": "es5",
   "useTabs": false,
-  "importOrder": ["<THIRD_PARTY_MODULES>", "^@app/(.*)$", "^~/(.*)$", "^[./]"],
+  "importOrder": ["<THIRD_PARTY_MODULES>", "^@/(.*)$", "^~/(.*)$", "^[./]"],
   "plugins": ["prettier-plugin-tailwindcss", "@trivago/prettier-plugin-sort-imports"]
 }
