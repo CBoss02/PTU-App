@@ -44,7 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App({ loaderData }: Route.ComponentProps) {
   return (
     <ClerkProvider loaderData={loaderData} signUpFallbackRedirectUrl="/" signInFallbackRedirectUrl="/">
-      <header className="fixed right-8 flex items-center justify-center px-4 py-8">
+      <header className="fixed right-2 flex items-center justify-center px-2 py-4">
         <SignedOut>
           <div className="[&>button]:cursor-pointer">
             <SignInButton />
