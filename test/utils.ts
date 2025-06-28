@@ -1,6 +1,6 @@
-export const setTestEnv = (env) => ({
+export const setTestEnv = (env: any) => ({
   ...env,
-  VITE_CLERK_PUBLISHABLE_KEY: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-  CLERK_PUBLISHABLE_KEY: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-  CLERK_SECRET_KEY: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+  VITE_CLERK_PUBLISHABLE_KEY: `${env.VITE_CLERK_PUBLISHABLE_KEY}`,
+  CLERK_PUBLISHABLE_KEY: `${env.CLERK_PUBLISHABLE_KEY}`,
+  CLERK_SECRET_KEY: `${env.CLERK_SECRET_KEY}`,
 })
