@@ -1,8 +1,11 @@
 import { data } from 'react-router'
 import type { Route } from './+types/home'
+import { ThemeProvider } from '@/components/theme-provider'
+import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
+import {AppSidebar} from "@/components/app-sidebar";
 
 export function meta(_: Route.MetaArgs) {
-  return [{ title: 'New React Router App' }, { name: 'description', content: 'Welcome to React Router!' }]
+  return [{ title: 'PTU AI' }, { name: 'description', content: 'Welcome to React Router!' }]
 }
 
 export const loader = async (_: Route.LoaderArgs) => {
@@ -11,10 +14,13 @@ export const loader = async (_: Route.LoaderArgs) => {
 
 export default function Home(_: Route.ComponentProps) {
   return (
-    <main className="flex h-dvh items-center justify-center">
-      <div className="grid gap-6 text-center">
-        <h1 className="text-6xl font-black">HELLO WORLD</h1>
-      </div>
-    </main>
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+          <SidebarProvider>
+              <AppSidebar/>
+              <main>
+                  <SidebarTrigger size={"lg"} className={"m-3"}/>
+              </main>
+          </SidebarProvider>
+      </ThemeProvider>
   )
 }
